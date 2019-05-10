@@ -1,6 +1,17 @@
 <h1>Quote of the day</h1>
 
 <%= form_with scope: :quote, url: quotes_path, local: true do |form| %>
+  <% if @quote.errors.any? %>
+    <div id="error_explanation">
+      <h3>Oops! Something went wrong:</h3>
+      <ul>
+        <% @quote.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <p>
     <%= form.label :title %><br>
     <%= form.text_field :title %>

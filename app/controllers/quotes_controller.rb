@@ -9,13 +9,17 @@ class QuotesController < ApplicationController
   end
 
   def new
+    @quote = Quote.new
   end
 
   def create
     @quote = Quote.new(quote_params)
 
-    @quote.save
-    redirect_to @quote
+    if @quote.save
+      redirect_to @quote
+    else
+      render 'new'
+    end
   end
 
   private
