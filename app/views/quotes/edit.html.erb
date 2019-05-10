@@ -1,29 +1,5 @@
 <h1>Edit your quote</h1>
 
-<%= form_with(model: @quote, local:true) do |form| %>
-  <% if @quote.errors.any? %>
-    <div id="error_explanation">
-      <h3>Oops! Something went wrong:</h3>
-      <ul>
-        <% @quote.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= render 'form' %>
 
-  <p>
-    <%= form.label :author %><br>
-    <%= form.text_field :author %>
-  </p>
-
-  <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
-  </p>
-
-  <p>
-    <%= form.submit %>
-  </p>
-
-<% end %>
+<button><%= link_to 'Back', quotes_index_path %></button>
