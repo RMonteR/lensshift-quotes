@@ -1,6 +1,6 @@
-<h1>Quote of the day</h1>
+<h1>Edit your quote</h1>
 
-<%= form_with scope: :quote, url: quotes_path, local: true do |form| %>
+<%= form_with(model: @quote, local:true) do |form| %>
   <% if @quote.errors.any? %>
     <div id="error_explanation">
       <h3>Oops! Something went wrong:</h3>
