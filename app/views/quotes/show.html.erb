@@ -1,11 +1,15 @@
-<h1>Quote of the day</h1>
+<h1>Your quote</h1>
 
 <p>
-  <h3>Title:</h3>
-  <%= @quote.title %>
+  <h3>Author:</h3>
+  <%= @quote.author %>
 </p>
 
 <p>
   <h3>Quote:</h3>
   <%= @quote.text %>
 </p>
+
+<button> <%= link_to "Next quote", quotes_index_path, :method => :get %> </button>
+<button> <%= link_to "New quote", new_quote_path %> </button>
+<button> <%= link_to "Edit", edit_quote_path(@quote) %> </button>
