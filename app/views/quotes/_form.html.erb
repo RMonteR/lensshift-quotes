@@ -10,18 +10,24 @@
     </div>
   <% end %>
 
-  <p>
-    <%= form.label :author %><br>
-    <%= form.text_field :author %>
-  </p>
+  <div class="card">
+    <div class="card-body">
 
-  <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
-  </p>
+      <h4 class="author-title">
+        <%= form.label :author %>
+        <%= form.text_field :author %>
+      </h4>
 
-  <p>
-    <%= form.submit %>
-  </p>
+        <div>
+
+        <i class="fas fa-quote-left" aria-label= "quotes"></i><br>
+          <% form.label :text %><br>
+          <%= form.text_area :text %>
+        <i class="fas fa-quote-right" aria-label= "quotes"></i>
+      </div>
+
+      <button><%= form.submit %></button>
+    </div>
+  </div> <!-- end card with quote -->
 
 <% end %>

@@ -1,15 +1,23 @@
-<h1>Your quote</h1>
+<div class= "container">
 
-<p>
-  <h3>Author:</h3>
-  <%= @quote.author %>
-</p>
+  <h1 id="main-title">Your quote</h1>
 
-<p>
-  <h3>Quote:</h3>
-  <%= @quote.text %>
-</p>
+  <div class="card">
+    <div class="card-body">
+      <h4 id="author-title">Author: <%= @quote.author %></h4>
+      <p>
+        <i class="fas fa-quote-left" aria-label= "quotes"></i><br>
+        <%= @quote.text %><br>
+        <i class="fas fa-quote-right" aria-label= "quotes"></i>
+      </p>
+      <button id="next-btn"> <%= link_to "Next quote", quotes_path, method: :get %> </button>
+    </div>
+  </div> <!-- end card with quote -->
 
-<button> <%= link_to "Next quote", quotes_index_path, :method => :get %> </button>
-<button> <%= link_to "New quote", new_quote_path %> </button>
-<button> <%= link_to "Edit", edit_quote_path(@quote) %> </button>
+  <div id="btn-section">
+    <button id="below-btns"> <%= link_to "New quote", new_quote_path %> </button>
+    <button id="below-btns"> <%= link_to "Edit", edit_quote_path(@quote) %></button>
+    <button id="below-btns"> <%= link_to "Delete", quote_path(@quote), method: :delete, data: { confirm: 'Are you sure?' } %></button>
+  </div>
+
+</div>

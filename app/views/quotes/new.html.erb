@@ -1,5 +1,10 @@
-<h1>Quote of the day</h1>
+<div class="container">
 
-<%= render 'form' %>
+  <h1>Quote of the day</h1>
 
-<button><%= link_to 'Back', quotes_index_path %></button>
+  <%= render 'form' %>
+
+  <div class="btn-section">
+    <button class="below-btns"> <%= link_to "Back", quotes_path %> </button>
+  </div>
+</div>

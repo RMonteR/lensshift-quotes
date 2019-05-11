@@ -1,18 +1,23 @@
-<h1>Quote of the day</h1>
-<table>
-  <tr>
-    <th>Author: </th>
-    <th>Text: </th>
-    <th></th>
-  </tr>
+<div class= "container">
 
-  <tr>
-    <td><%= @quotes.author %></td>
-    <td><%= @quotes.text %></td>
-  </tr>
-</table>
+  <h1 class="main-title">Quote of the day</h1>
 
-<button> <%= link_to "Next quote", quotes_index_path, method: :get %> </button>
-<button> <%= link_to "New quote", new_quote_path %> </button>
-<button> <%= link_to "Edit", edit_quote_path(@quotes) %></button>
-<button> <%= link_to "Delete", quote_path(@quotes), method: :delete, data: { confirm: 'Are you sure?' } %></button>
+  <div class="card">
+    <div class="card-body">
+      <h4 class="author-title">Author: <%= @quotes.author %></h4>
+      <p>
+        <i class="fas fa-quote-left" aria-label= "quotes"></i><br>
+        <%= @quotes.text %><br>
+        <i class="fas fa-quote-right" aria-label= "quotes"></i>
+      </p>
+      <button class="next-btn"> <%= link_to "Next quote", quotes_path, method: :get %> </button>
+    </div>
+  </div> <!-- end card with quote -->
+
+
+  <div class="btn-section">
+    <button class="below-btns"> <%= link_to "New quote", new_quote_path %> </button>
+    <button class="below-btns"> <%= link_to "Edit", edit_quote_path(@quotes) %></button>
+    <button class="below-btns"> <%= link_to "Delete", quote_path(@quotes), method: :delete, data: { confirm: 'Are you sure?' } %></button>
+  </div>
+</div><!-- container div -->
