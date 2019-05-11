@@ -12,6 +12,7 @@
   </tr>
 </table>
 
-<button> <%= link_to "Next quote", quotes_index_path, :method => :get %> </button>
+<button> <%= link_to "Next quote", quotes_index_path, method: :get %> </button>
 <button> <%= link_to "New quote", new_quote_path %> </button>
 <button> <%= link_to "Edit", edit_quote_path(@quotes) %></button>
+<button> <%= link_to "Delete", quote_path(@quotes), method: :delete, data: { confirm: 'Are you sure?' } %></button>

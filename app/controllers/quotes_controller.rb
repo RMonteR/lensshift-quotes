@@ -36,6 +36,13 @@ class QuotesController < ApplicationController
     end
   end
 
+  def destroy
+    @quote = Quote.find(params[:id])
+    @quote.destroy
+
+    redirect_to quotes_path
+  end
+
   private
     def quote_params
       params.require(:quote).permit(:author, :text)
