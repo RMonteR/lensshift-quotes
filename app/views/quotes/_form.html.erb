@@ -1,27 +1,38 @@
 <%= form_with model: @quote, local:true do |form| %>
-  <% if @quote.errors.any? %>
-    <div id="error_explanation">
-      <h3>Oops! Something went wrong:</h3>
-      <ul>
-        <% @quote.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
+
+  <div class="row">
+    <div class="col">
+      <% if @quote.errors.any? %>
+        <div id="error_explanation">
+          <h3>Oops! Something went wrong:</h3>
+          <ul>
+            <% @quote.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
     </div>
   <% end %>
 
-  <p>
-    <%= form.label :author %><br>
-    <%= form.text_field :author %>
-  </p>
+  <div class= "row">
+    <div class="col">
+      <div class="card">
+        <h4 class="author-title">
+          <%= form.label :author %>
+          <%= form.text_field :author, :class=> "author-field"%>
+        </h4>
 
-  <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
-  </p>
+        <div class="quote-div">
+          <i class="fas fa-quote-left" aria-label= "quote marks"></i><br>
+          <% form.label :text %><br>
+          <%= form.text_area :text %>
+          <i class="fas fa-quote-right" aria-label= "quote marks"></i>
+        </div>
 
-  <p>
-    <%= form.submit %>
-  </p>
+        <button id="submit-button"><%= form.submit %></button>
+      </div> <!-- end card with quote -->
+    </div><!-- end column -->
+  </div><!-- end row -->
 
 <% end %>

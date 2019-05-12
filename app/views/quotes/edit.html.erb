@@ -1,5 +1,19 @@
-<h1>Edit your quote</h1>
+<div class="container">
 
-<%= render 'form' %>
+  <div class="row">
+    <div class="col">
+      <h1 class="main-title">Edit your quote</h1>
+    </div>
+  </div>
 
-<button><%= link_to 'Back', quotes_index_path %></button>
+  <%= render 'form' %>
+
+
+  <div class="row">
+    <div class="col col-sm-12">
+      <div class="btn-section">
+        <button class="below-btns"> <%= link_to "Back", quotes_path %> </button>
+      </div>
+    </div>
+  </div><!-- row div -->
+</div><!-- container div -->
