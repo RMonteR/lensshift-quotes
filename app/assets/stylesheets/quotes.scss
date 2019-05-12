@@ -17,25 +17,22 @@ body {
 }
 
 .main-title {
-  padding: 20px;
+  margin: auto;
+  width: 70%;
+  display: block;
+  padding: 20px 0;
   font-style: normal;
   font-weight: bolder;
-  font-size: 48px;
+  font-size: 2.5em;
   font-family: "League Spartan", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
  }
 
-// ***** DISPLAY CARD *****
-
-.author-title {
-  font-family: "League Spartan", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  padding-bottom: 50px;
-}
-
-.card {
-  border: 8px solid #2B2D2E;
-  background: #fefefe;
-  margin-bottom: 25px;
-  padding: 25px 25px;
+// Make title wider and smaller in size for smaller screens
+@media screen and (max-width: 900px) {
+  .main-title {
+    width: 100%;
+    font-size: 2em;
+  }
 }
 
 button, button input {
@@ -48,11 +45,11 @@ button, button input {
   text-align: center;
   font-family: inherit;
   cursor: pointer;
-  transition: background-color 0.25;
+  background-color: transparent;
 }
 
-button a {
-  color: #2B2D2E;
+button a, button input {
+  color: inherit;
   font-weight: 500;
 }
 
@@ -61,9 +58,45 @@ button:hover {
   transition-delay: 0s;
 }
 
+// ***** CARD *****
+
+.card {
+  border: 8px solid #2B2D2E;
+  background: #fefefe;
+  margin-bottom: 25px;
+  padding: 25px 25px;
+  margin: auto;
+  width: 70%;
+  display: block;
+}
+
+// On screens that are 350px or less make the card wider
+@media screen and (max-width: 900px) {
+  .card {
+    width: 100%;
+  }
+}
+
+.author-title {
+  font-family: "League Spartan", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  padding-bottom: 30px;
+}
+
+.quote-div {
+  margin-bottom: 50px;
+}
+
+.fa-quote-right {
+  margin-top: 20px;
+  float: right;
+}
+
+.fa-quote-left {
+  margin-bottom: 20px;
+}
+
 .next-btn, button input {
   background-color: #00baba;
-  margin-top: 50px;
 }
 
 .next-btn:hover, button input:hover {
@@ -75,34 +108,6 @@ button:hover {
   color: inherit;
 }
 
-// ***** BUTTONS BELOW CARD *****
-
-.btn-section {
-  padding: 10px;
-  text-align: right;
-}
-.below-btns {
-  background-color: #ffa920;
-  margin: 0 5px;
-}
-
-.below-btns:hover {
-  background-color: #cc8719;
-}
-
-.below-btns a:hover {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* On screens that are 350px or less display buttons below one another */
-@media screen and (max-width: 350px) {
-  .below-btns {
-    display: block;
-    margin: 5px 0;
-  }
-}
-
 // ***** NEW & EDIT CARD ****
 h4 label {
   margin-right: 15px;
@@ -112,6 +117,18 @@ h4 input {
   border: 1px solid #2B2D2E;
   border-radius: 2px;
 }
+
+.author-field {
+  margin: auto;
+  width: 70%;
+}
+
+@media screen and (max-width: 900px) {
+  .author-field {
+    width: 100%;
+  }
+}
+
 textarea {
   width: 100%;
   height: 200px;
@@ -119,6 +136,56 @@ textarea {
   border-radius: 2px;
 }
 
-.fa-quote-right {
-  margin-top: 30px;
+#error_explanation {
+  padding: 5px;
+  margin: 10px auto;
+  width: 70%;
+  display: block;
+  background-color: navajowhite;
+  border: 1px solid black;
+  font-family: inherit;
+}
+
+@media screen and (max-width: 900px) {
+  #error_explanation {
+    width: 100%;
+    font-size: 1em;
+  }
+}
+// ***** BUTTONS BELOW CARD *****
+
+.btn-section {
+  padding: 10px;
+  text-align: right;
+  margin: auto;
+  width: 70%;
+}
+
+@media screen and (max-width: 900px) {
+  .btn-section {
+    width: 100%;
+  }
+}
+
+.below-btns {
+  background-color: #ffa920;
+  margin-top: 20px;
+  margin-left: 5px;
+}
+
+// On screens that are 350px or less display buttons below one another
+@media screen and (max-width: 350px) {
+  .below-btns {
+    display: block;
+    margin: 5px 0;
+  }
+}
+
+.below-btns:hover {
+  background-color: #cc8719;
+}
+
+.below-btns a:hover {
+  text-decoration: none;
+  color: inherit;
 }

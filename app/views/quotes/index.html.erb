@@ -1,23 +1,32 @@
 <div class= "container">
 
-  <h1 class="main-title">Quote of the day</h1>
-
-  <div class="card">
-    <div class="card-body">
-      <h4 class="author-title">Author: <%= @quotes.author %></h4>
-      <p>
-        <i class="fas fa-quote-left" aria-label= "quotes"></i><br>
-        <%= @quotes.text %><br>
-        <i class="fas fa-quote-right" aria-label= "quotes"></i>
-      </p>
-      <button class="next-btn"> <%= link_to "Next quote", quotes_path, method: :get %> </button>
+  <div class="row">
+    <div class="col">
+      <h1 class="main-title">Quote of the day</h1>
     </div>
-  </div> <!-- end card with quote -->
-
-
-  <div class="btn-section">
-    <button class="below-btns"> <%= link_to "New quote", new_quote_path %> </button>
-    <button class="below-btns"> <%= link_to "Edit", edit_quote_path(@quotes) %></button>
-    <button class="below-btns"> <%= link_to "Delete", quote_path(@quotes), method: :delete, data: { confirm: 'Are you sure?' } %></button>
   </div>
+
+  <div class= "row">
+    <div class="col">
+      <div class="card">
+        <h4 class="author-title">Author: <%= @quotes.author %></h4>
+        <div class="quote-div">
+          <i class="fas fa-quote-left" aria-label= "quote marks"></i><br>
+          <%= @quotes.text %><br>
+          <i class="fas fa-quote-right" aria-label= "quote marks"></i>
+        </div>
+        <button class="next-btn"> <%= link_to "Next quote", quotes_path, method: :get %> </button>
+      </div> <!-- end card with quote -->
+    </div><!-- end column -->
+  </div><!-- end row -->
+
+  <div class="row">
+    <div class="col col-sm-12">
+      <div class="btn-section">
+        <button class="below-btns"> <%= link_to "New quote", new_quote_path %> </button>
+        <button class="below-btns"> <%= link_to "Edit", edit_quote_path(@quotes) %></button>
+        <button class="below-btns"> <%= link_to "Delete", quote_path(@quotes), method: :delete, data: { confirm: 'Are you sure?' } %></button>
+      </div>
+    </div>
+  </div><!-- row div -->
 </div><!-- container div -->
