@@ -17,8 +17,6 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-config.serve_static_assets = true
-
 module LensshiftQuotes
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
@@ -31,5 +29,8 @@ module LensshiftQuotes
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.assets.compile = true
+
   end
 end
