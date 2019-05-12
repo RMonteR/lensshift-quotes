@@ -72,9 +72,7 @@ button:hover {
 
 // On screens that are 350px or less make the card wider
 @media screen and (max-width: 900px) {
-  .card {
-    width: 100%;
-  }
+  .card { width: 100%; }
 }
 
 .author-title {
@@ -82,39 +80,29 @@ button:hover {
   padding-bottom: 30px;
 }
 
-.quote-div {
-  margin-bottom: 50px;
-}
+.quote-div { margin-bottom: 50px; }
 
 .fa-quote-right {
   margin-top: 20px;
   float: right;
 }
 
-.fa-quote-left {
-  margin-bottom: 20px;
-}
+.fa-quote-left { margin-bottom: 20px; }
 
-.next-btn, button input {
-  background-color: #00baba;
-}
+.next-btn, button input { background-color: #00baba; }
 
-.next-btn:hover, button input:hover {
-  background-color: #009e9e;
-}
+.next-btn:hover, button input:hover { background-color: #009e9e; }
 
 .next-btn a:hover, button input a:hover {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 // ***** NEW & EDIT CARD ****
-h4 label {
-  margin-right: 15px;
-}
+h4 label { margin-right: 15px; }
 
 h4 input {
-  border: 1px solid #2B2D2E;
+  border: 1px solid #2b2d2e;
   border-radius: 2px;
 }
 
@@ -124,47 +112,43 @@ h4 input {
 }
 
 @media screen and (max-width: 900px) {
-  .author-field {
-    width: 100%;
-  }
+  .author-field { width: 100%; }
 }
 
 textarea {
-  width: 100%;
-  height: 200px;
-  border: 1px solid #2B2D2E;
+  border: 1px solid #2b2d2e;
   border-radius: 2px;
+  height: 200px;
+  width: 100%;
 }
 
-#error_explanation {
-  padding: 5px;
-  margin: 10px auto;
-  width: 70%;
+#error-explanation {
+  background-color: #ffdead;
+  border: 1px solid #000000;
   display: block;
-  background-color: navajowhite;
-  border: 1px solid black;
   font-family: inherit;
+  margin: 10px auto;
+  padding: 5px;
+  width: 70%;
 }
 
 @media screen and (max-width: 900px) {
-  #error_explanation {
-    width: 100%;
+  #error-explanation {
     font-size: 1em;
+    width: 100%;
   }
 }
 // ***** BUTTONS BELOW CARD *****
 
 .btn-section {
+  margin: auto;
   padding: 10px;
   text-align: right;
-  margin: auto;
   width: 70%;
 }
 
 @media screen and (max-width: 900px) {
-  .btn-section {
-    width: 100%;
-  }
+  .btn-section {  width: 100%;  }
 }
 
 .below-btns {
@@ -181,11 +165,9 @@ textarea {
   }
 }
 
-.below-btns:hover {
-  background-color: #cc8719;
-}
+.below-btns:hover { background-color: #cc8719;  }
 
 .below-btns a:hover {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
