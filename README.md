@@ -2,7 +2,7 @@
 
 # Random quote displayer/generator
 
-### Project
+## Project
 This is a web app created as a task for Lensshift.
 It should include:
 * A landing page displaying a random quote with some buttons:
@@ -18,11 +18,15 @@ User authentication
 
 Merged branches have not been deleted to show my workflow, as requested.
 
-### Specs
+## Specs
 
 Ruby on Rails application  
 Ruby version: ruby-2.6.0
 Rails version: 5.2.3
+### Frontend:
 Bootstrap and Fontawesome
+### Gems:
+* pg
+* sqlite3 moved to :development :test
 
 Layout inspired by current Lensshift website
