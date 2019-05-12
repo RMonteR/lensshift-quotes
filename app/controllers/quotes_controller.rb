@@ -1,7 +1,7 @@
 class QuotesController < ApplicationController
   def index
     # Not using Quote.limit(1).order("RANDOM()") because of a deprecation warning for Ruby 6.0.
-    @quote = Quote.offset(rand(Quote.count)).first
+    @quotes = Quote.offset(rand(Quote.count)).first
   end
 
   def show
