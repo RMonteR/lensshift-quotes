@@ -20,11 +20,13 @@ Merged branches have not been deleted to show my workflow, as requested by the t
 
 ## Specs
 
-Ruby on Rails application  
+Ruby on Rails application
 Ruby version: ruby-2.6.0
 Rails version: 5.2.3
+
 ### Frontend
 Added Bootstrap and Fontawesome
+
 ### Gems
 * pg
 * sqlite3 moved to :development :test
