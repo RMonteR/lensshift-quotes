@@ -24,10 +24,10 @@ Ruby on Rails application
 Ruby version: ruby-2.6.0
 Rails version: 5.2.3
 
-### Frontend:
-Added Bootstrap and Fontawesome links
+### Frontend
+Added Bootstrap and Fontawesome
 
-### Gems:
+### Gems
 * pg
 * sqlite3 moved to :development :test
 
